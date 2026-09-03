@@ -1,0 +1,35 @@
+/* Keeps the embedded profile documents aligned with the studio theme. */
+:root {
+  --panel: #142325;
+  --primary: #ffd99a;
+  --header-start: #0b2427;
+  --header-end: #60422b;
+  --text: #f3f7f4;
+  --muted: #aebfba;
+  --line: #2b4140;
+  --shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+}
+
+body { background: #0d1718; color: var(--text); font-family: "Trebuchet MS", Verdana, sans-serif; font-size: 15px; }
+.page { max-width: 1120px; margin: 24px auto; background: var(--panel); border-color: var(--line); border-radius: 8px; box-shadow: var(--shadow); }
+.top { background: linear-gradient(115deg, var(--header-start), var(--header-end)); padding: 30px clamp(22px, 4vw, 48px); }
+h1, .section-header h2 { font-family: Georgia, "Times New Roman", serif; letter-spacing: 0; }
+.content { grid-template-columns: minmax(220px, 28%) 1fr; }
+.sidebar { background: #102021; border-color: var(--line); padding: 28px clamp(18px, 3vw, 30px); }
+.main { padding: 32px clamp(22px, 4vw, 44px); }
+.section-title { color: var(--primary); border-color: var(--line); }
+.summary, .list { color: var(--text); }
+.small-text, .section-header p, .about-card p { color: var(--muted); }
+table, .skill-list li, .language-list li, .about-card, .contact-box { background: #172a2b; border-color: var(--line); }
+th { background: #1c3837; color: var(--primary); }
+td { border-color: var(--line); }
+.level, .skill-list span, .contact-links a { background: rgba(242, 184, 102, 0.14); color: var(--primary); border-color: var(--line); }
+.is-leaving { opacity: 0; transition: opacity 220ms ease; }
+
+@media (max-width: 760px) {
+  .page { margin: 0; border-width: 0; border-radius: 0; }
+  .top { padding: 24px 20px; }
+  .content { grid-template-columns: 1fr; }
+  .sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
+  .main, .sidebar { padding: 24px 20px; }
+}
