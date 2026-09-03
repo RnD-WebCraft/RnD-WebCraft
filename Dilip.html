@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilip | Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="icon" type="image/jpeg" href="images/dilip.jpeg" />
+  <style>
+    :root {
+      --panel: #ffffff;
+      --primary: #123a5b;
+      --header-start: #1f2d3d;
+      --header-end: #2d4a43;
+      --text: #1f2937;
+      --muted: #5b6473;
+      --line: #dde8f3;
+      --shadow: 0 18px 40px rgba(18, 58, 91, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, #f7fbff 0%, #eef4fb 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 40px auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .top {
+      background: linear-gradient(135deg, var(--header-start), var(--header-end));
+      color: #fff;
+      padding: 34px 40px;
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.45);
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      letter-spacing: 0.05em;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 22px;
+      padding-left: 12px;
+    }
+
+    .contact a {
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      font-size: 1.15rem;
+      margin: 0 4px;
+      padding: 0;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
+
+    .sidebar {
+      background: #f8fafc;
+      border-right: 1px solid var(--line);
+      padding: 28px 22px;
+    }
+
+    .main {
+      padding: 28px 28px 32px;
+    }
+
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 0.95rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 8px;
+    }
+
+    .summary, .small-text, .list {
+      color: var(--text);
+      font-size: 0.97rem;
+    }
+
+    .summary {
+      margin: 0;
+    }
+
+    .skill-list, .language-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .skill-list li, .language-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.93rem;
+    }
+
+    .level {
+      background: rgba(58,160,168,0.12);
+      color: var(--primary);
+      font-size: 0.74rem;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 4px 8px;
+    }
+
+    .small-text {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    th, td {
+      text-align: left;
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.93rem;
+    }
+
+    th {
+      background: #edf3fb;
+      color: var(--primary);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .list li {
+      margin-bottom: 8px;
+    }
+
+    .section-header {
+      margin-bottom: 20px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(2rem, 2.8vw, 2.7rem);
+      color: var(--primary);
+      letter-spacing: -0.04em;
+    }
+
+    .section-header p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .about-card, .contact-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-card {
+      padding: 28px;
+      width: 100%;
+    }
+
+    .about-card h3, .contact-box h3 {
+      margin-top: 0;
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .skill-list span {
+      background: #edf5fa;
+      color: var(--primary);
+      border: 1px solid #dfeaf5;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .contact-box {
+      width: 100%;
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #edf5fa;
+      color: var(--primary);
+      border: 1px solid var(--line);
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 760px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .top {
+        padding: 24px 20px;
+      }
+
+      .main, .sidebar {
+        padding: 22px 18px;
+      }
+
+      .contact {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="profile-dark.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="header-row">
+        <div class="profile">
+          <div class="avatar">
+            <img src="images/dilip.jpeg" alt="Dilip" />
+          </div>
+          <div>
+            <h1>DILIP</h1>
+            <div class="subtitle">Aspiring Software Developer</div>
+          </div>
+        </div>
+
+        <div class="contact">
+          <a href="https://www.instagram.com/rnd_webcraft" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a>
+          <a href="https://github.com/RnD-WebCraft" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i>&nbsp;GitHub</a>
+          <a href="https://www.linkedin.com/in/rnd-webcraft-b3a0b8433" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a>
+          <a href="mailto:rndwebcraft@gmail.com" target="_blank" aria-label="Email"><i class="fa-solid fa-envelope"></i>&nbsp;Gmail</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <aside class="sidebar">
+        <section class="section">
+          <h2 class="section-title">Profile</h2>
+          <p class="summary">
+            Motivated and detail-oriented B.Tech student in Computer Science and Engineering 
+            with a strong interest in software development and digital product thinking.
+          </p>
+        </section>
+        <section class="section">
+          <h2 class="section-title">Technical Overview</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Programming</td>
+                  <td>Python, HTML, CSS, JavaScript, Java, Prolog</td>
+                </tr>
+                <tr>
+                  <td>Database</td>
+                  <td>MySQL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Languages</h2>
+          <ul class="language-list">
+            <li><span>English</span><span class="small-text">Professional</span></li>
+            <li><span>Tamil</span><span class="small-text">Native</span></li>
+            <li><span>Telugu</span><span class="small-text">Professional</span></li>
+            <li><span>Hindi</span><span class="small-text">Beginner</span></li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="main">
+
+        <section class="section">
+          <h2 class="section-title">Additional Information</h2>
+          <ul class="list">
+            <li>Interested in software engineering, web development, and digital product creation.</li>
+            <li>Driven by curiosity, consistency, and practical problem solving.</li>
+            <li>Eager to learn, build, and contribute to meaningful projects.</li>
+          </ul>
+        </section>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3>Professional Summary</h3>
+              <p>
+                Motivated and detail-oriented B.Tech student in Computer Science and Engineering with a focus on
+                Artificial Intelligence and Machine Learning. I enjoy building practical digital experiences,
+                solving problems with logic, and learning technologies that help businesses grow.
+              </p>
+              <p>
+                I am especially interested in creating clean, user-friendly web solutions that combine solid
+                engineering with real business value. My goal is to keep learning, building meaningful digital
+                products, and contributing to teams that care about quality, clarity, and impact.
+              </p>
+              <div class="skill-list">
+                <span>Python</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Java</span>
+                <span>MySQL</span>
+                <span>Prolog</span>
+                <span>Problem Solving</span>
+                <span>Communication</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
