@@ -296,6 +296,19 @@ h1, h2, h3 { line-height: 1.15; }
 .profile-showcase { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .profile-frame { width: 100%; height: 620px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
 
+.design-architecture-section { padding: 36px var(--page-pad) 48px; border-top: 1px solid var(--line); }
+.design-header { max-width: 720px; margin: 0 auto 24px; text-align: center; }
+.design-header h3 { margin: 8px 0 0; font-size: 1.2rem; color: var(--ink); line-height: 1.3; letter-spacing: -0.02em; }
+.design-card-compact { max-width: 720px; margin: 0 auto; padding: 0; border: 1px solid var(--line); background: var(--surface); display: grid; grid-template-columns: minmax(140px, 180px) 1fr; gap: 0; box-shadow: var(--shadow); overflow: hidden; }
+.design-portrait-compact { aspect-ratio: 4 / 3; overflow: hidden; background: #203333; padding: 8px; display: flex; align-items: center; justify-content: center; }
+.design-portrait-compact img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.design-card-top { padding: 20px 18px; display: flex; flex-direction: column; gap: 10px; background: rgba(20, 35, 37, 0.6); }
+.design-role { margin: 0; font-size: 1rem; font-weight: 700; color: var(--gold-light); font-family: var(--font-sans); letter-spacing: 0.02em; line-height: 1.3; }
+.design-specialization { margin: 0; font-size: 0.75rem; font-weight: 600; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--font-sans); }
+.design-summary { margin: 0; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; font-family: var(--font-serif); font-style: italic; }
+.design-tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.design-tech-stack span { display: inline-block; padding: 5px 8px; border: 1px solid rgba(242, 184, 102, 0.2); border-radius: 3px; background: rgba(242, 184, 102, 0.04); color: var(--gold-light); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em; }
+
 .cta { max-width: none; padding: 92px 24px 104px; background: radial-gradient(circle at 50% 0%, rgba(242, 184, 102, 0.08), transparent 34%), #0a1213; text-align: center; }
 .cta-intro { max-width: 620px; margin: 0 auto 34px; }
 .cta-intro h2 { margin: 12px 0 8px; color: var(--ink); font-family: var(--font-sans); font-size: clamp(2rem, 4vw, 3.25rem); }
@@ -420,6 +433,10 @@ footer p { max-width: 1120px; margin: 0 auto; font-family: "Trebuchet MS", sans-
   .service-contact { grid-template-columns: 1fr; }
   .service-contact-actions { grid-template-columns: repeat(2, minmax(120px, 1fr)); min-width: 0; width: 100%; }
   .identity-section { padding-block: 76px 84px; }
+  .design-architecture-section { padding-block: 42px 54px; }
+  .design-card-compact { grid-template-columns: minmax(0, 200px) 1fr; gap: 0; }
+  .design-card-top { padding: 22px 20px; }
+  .design-role { font-size: 1.05rem; }
   .cta { padding-block: 76px 88px; }
   .home-process { padding-bottom: 30px; }
   .home-toolkit { padding-top: 14px; }
@@ -444,6 +461,11 @@ footer p { max-width: 1120px; margin: 0 auto; font-family: "Trebuchet MS", sans-
   .contact-grid { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.3fr); }
   .profile-showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-preview, .about, .portfolio, .contact { padding-block: 60px 84px; }
+  .design-architecture-section { padding-block: 50px 62px; }
+  .design-card-compact { grid-template-columns: minmax(0, 260px) 1fr; gap: 0; }
+  .design-card-top { padding: 28px 26px; }
+  .design-role { font-size: 1.12rem; }
+  .design-summary { font-size: 0.88rem; }
   .home-process { padding-bottom: 42px; }
   .home-toolkit { padding-top: 20px; }
   .identity-section { padding-block: 86px 92px; }
@@ -457,6 +479,10 @@ footer p { max-width: 1120px; margin: 0 auto; font-family: "Trebuchet MS", sans-
   .section-intro h1, .section-intro h2 { font-size: clamp(2.4rem, 3.4vw, 3.7rem); }
   .home-overview p { font-size: clamp(1.2rem, 1.5vw, 1.4rem); }
   .services-preview, .about, .portfolio, .contact { padding-block: 76px 104px; }
+  .design-architecture-section { padding-block: 56px 70px; }
+  .design-card-compact { grid-template-columns: minmax(0, 300px) 1fr; gap: 0; }
+  .design-card-top { padding: 32px 30px; }
+  .design-role { font-size: 1.2rem; }
   .home-process { padding-bottom: 48px; }
   .home-toolkit { padding-top: 24px; }
   .cta-box { max-width: 960px; }
