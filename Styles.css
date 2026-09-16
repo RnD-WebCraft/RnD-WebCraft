@@ -491,3 +491,86 @@ footer p { max-width: 1120px; margin: 0 auto; font-family: "Trebuchet MS", sans-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+.industries-section {
+  padding: 62px var(--page-pad) 70px;
+  border-top: 1px solid var(--line);
+}
+
+.industries-section > .section-intro {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.industry-card {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  min-height: 92px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(20, 35, 37, 0.82);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.industry-card:hover {
+  border-color: rgba(242, 184, 102, 0.46);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24), 0 0 22px rgba(242, 184, 102, 0.08);
+  transform: translateY(-3px);
+}
+
+.industry-icon {
+  display: grid;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(242, 184, 102, 0.24);
+  border-radius: 10px;
+  background: rgba(242, 184, 102, 0.08);
+  color: var(--gold-light);
+  font-size: 0.95rem;
+}
+
+.industry-card h3 {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.industry-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 600px) {
+  .industries-section { padding-block: 76px 84px; }
+  .industries-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+}
+
+@media (min-width: 800px) and (max-width: 1023px) {
+  .industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .industries-grid { grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .industry-card { min-height: 104px; padding: 14px 12px; }
+  .industry-card h3 { font-size: 0.84rem; }
+  .industry-card p { font-size: 0.68rem; }
+}
+
+@media (min-width: 1280px) {
+  .industries-section { padding-block: 86px 94px; }
+}
